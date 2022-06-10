@@ -9,8 +9,8 @@
     Exercise One: create a variable called myBoolean, assign it a boolean value,  and use it to make the if 
     statement below execute
 */
-
-if(false){
+let myBoolean = true;
+if(myBoolean){  
     console.log("If you can see this in the console then you are done with exercise one");
 }
 
@@ -18,8 +18,9 @@ if(false){
     Exercise Two: create two variables, one called numOne and the other numTwo, and assign them both numeric values.
     Use them to make the if statement below execute. HINT: you will need to use one or more logical operators
 */
-
-if(false){
+let numOne = 4;
+let numTwo = 5;
+if(numTwo > numOne){
     console.log("if you can see this in the console then you are done with exercise two");
 }
 
@@ -28,8 +29,8 @@ if(false){
     quotes, double quotes, or back tics). Use the variable you created and the strict equality operator to make the
     if statement below execute
 */
-
-if(false){
+var myString = "hello";
+if(myString === "hello"){
     console.log("if you can see this in the console then you are done with exercise three");
 }
 
@@ -38,7 +39,8 @@ if(false){
     myStringTwo and assign it the same value but as a string. Use these two variables and the loose equality operator
     to make the if statement execute
 */
-
-if(false){
+let myNumThree = 5;
+let myStringTwo = "5";
+if( myNumThree == myStringTwo){
     console.log("if you can see this in the console then you are done with exercise four");
 }
