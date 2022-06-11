@@ -23,9 +23,11 @@
     HINT: you can provide all the relevant information within the for statement to control the loop
 */
 
-for(;false;){
-
+for(let i = 0; i <= 10; i++){
+    console.log(i);
 }
+
+
 
 /*
     Exercise two: make the for loop below print the even numbers from 0 to 20, one at a time. The console should
@@ -44,9 +46,11 @@ for(;false;){
     HINT: this requires more fine-tune control over the increment of your control variable
 */
 
-for(;false;){
-
+for(let i = 0; i <= 20; i += 2){
+    console.log(i);
 }
+
+
 
 /*
     Exercise Three: make the for loop below print the odd numbers from 30 through 0, one at a time. The console 
@@ -70,9 +74,18 @@ for(;false;){
     HINT: there is a mathematical operator that can help simplify your code logic
 */
 
-for(;false;){
+// for(let i = 29; i >= 0; i -= 2){
+//     console.log(i);
+// }
 
+for(let x = 30; x >= 1; x--){
+    if (x % 2 === 1){
+    //     console.log(x + " is an even number");
+    // } else {
+        console.log(x);
+    }
 }
+
 
 /*
     Exercise Four: make the for loop below print out the characters of the provided string one by one to the console.
