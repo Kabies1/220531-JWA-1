@@ -23,9 +23,11 @@
     HINT: create a variable outside the loop to control how many times the while loop will run
 */
 
-while(false){
+count = 0;
+while(count <= 10){
+console.log(count); count++;
+} 
 
-}
 
 /*
     Exercise two: make the while loop below print the even numbers from 0 to 20, one at a time. The console should
@@ -43,9 +45,9 @@ while(false){
 
     HINT: this requires more fine-tune control over the increment of your control variable
 */
-
-while(false){
-
+count = 0
+while(count <= 20){
+console.log(count); count +=2;
 }
 
 /*
@@ -69,9 +71,10 @@ while(false){
 
     HINT: there is a mathematical operator that can help simplify your code logic
 */
-
-while(false){
-
+count = 30;
+while(count >= 1){
+    if(count % 2 === 1)
+console.log(count); count--;
 }
 
 /*
@@ -79,7 +82,11 @@ while(false){
     so that the message will still print to the console once. HINT: There are two kinds of while loops you can
     create: one checks the boolean before execution, the other checks it after execution
 */
+let i = 2
+const n = 8
 
-while(false){
+do {
     console.log("if you see this then you are done with exercise four");
 }
+while(false)
+    

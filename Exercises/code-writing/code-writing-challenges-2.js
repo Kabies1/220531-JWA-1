@@ -9,8 +9,8 @@
     Exercise One: create a variable called myBoolean, assign it a boolean value,  and use it to make the else 
     statement below execute
 */
-
-if(true){
+let myBoolean = false;
+if(myBoolean){
     console.log("If you can see this you have NOT completed exercise one");
 } else {
     console.log("if you can see this you are done with exercise one")
@@ -20,8 +20,9 @@ if(true){
     Exercise Two: create two variables, one called numOne and the other numTwo, and assign them both numeric values.
     Use them to make the else statement below execute. HINT: you will need to use one or more logical operators
 */
-
-if(true){
+var numOne = 10;
+var numTwo = 15;
+if(numOne >= numTwo){
     console.log("If you can see this you have NOT completed exercise two");
 } else {
     console.log("if you can see this you are done with exercise two")
@@ -32,8 +33,8 @@ if(true){
     quotes, double quotes, or back tics). Use the variable you created and the strict equality operator to make the
     else statement below execute
 */
-
-if(true){
+myString = "5";
+if("5" === 5){
     console.log("If you can see this you have NOT completed exercise three");
 } else {
     console.log("if you can see this you are done with exercise three")
@@ -45,7 +46,9 @@ if(true){
     the else statement execute
 */
 
-if(true){
+myNumThree = 3;
+myStringTwo = "2";
+if(3 == 2){
     console.log("If you can see this you have NOT completed exercise four");
 } else {
     console.log("if you can see this you are done with exercise four")

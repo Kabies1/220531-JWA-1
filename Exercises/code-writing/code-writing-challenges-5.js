@@ -107,7 +107,10 @@ for(let x = 30; x >= 1; x--){
 
 */
 
-let myString = "Hello world!";
-for(;false;){
 
+
+let myString = "Hello world!";
+
+for(letter of myString){
+console.log(letter);
 }
