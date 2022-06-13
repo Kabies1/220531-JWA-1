@@ -8,20 +8,29 @@
     Exercise One: assign an empty object to the variable "myObject" below
 */
 
-let myObject;
+
+ myObject = {};
+
 /*
     Exercise Two: add a string value and a number value to the empty object you created above. Make the key for
     the numeric value a number as well. HINT: objects have two ways of creating new key/value pairs
 */
 
 // write code here
+let myObject = {
+    keyOne: 20,
+    keyTwo: "Maurice",
+    keyThree: 40,
+    keyFour: null
 
+}
+//console.log(myObject)
 /*
     Exercise Three: print the numeric and string values that you added to the object above. HINT: objects have two
     ways of accessing their keys
 */
 
-console.log(/* print one value here */);
+console.log(0);
 console.log(/* print the other value here */);
 
 /*

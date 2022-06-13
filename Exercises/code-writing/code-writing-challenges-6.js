@@ -8,21 +8,25 @@
     Exercise One: assign an empty array to the variable "myArray" below
 */
 
-let myArray;
+let myArray = [];
+
 /*
     Exercise Two: add a string value and a number value to the empty array you created above. HINT: arrays have a 
     built in method to handle this
 */
 
 // write code here
+myArray.push("Maurice", 35);
 
+//myArray.shift();
+myArray.pop();
 /*
     Exercise Three: print the numeric and string values that you added to the array above by referencing their
     index positions
 */
 
-console.log(/* print one value here */);
-console.log(/* print the other value here */);
+console.log(myArray[0]);
+console.log(myArray[1]);
 
 /*
     Exercise Four: remove the string element from the array in a way that makes it so only the number element
@@ -30,3 +34,7 @@ console.log(/* print the other value here */);
 */
 
 // write code here
+//delete myArray(0);
+
+
+
