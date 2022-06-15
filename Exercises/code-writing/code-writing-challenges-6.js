@@ -19,7 +19,7 @@ let myArray = [];
 myArray.push("Maurice", 35);
 
 //myArray.shift();
-myArray.pop();
+//myArray.pop();
 /*
     Exercise Three: print the numeric and string values that you added to the array above by referencing their
     index positions

@@ -68,7 +68,7 @@ Scrum is an implementation of the Agile mindset. It makes use of all the agile c
 - **Stakeholder**
     - this is the individual/group that the product is being created for
 - **Product Owner**
-    - the individual or small team that handle communication between the development team and the stakeholder. Typically the product ownder will help determine what features/requirements are necessary, and therfore, are added to the product backlog.
+    - the individual or small team that handle communication between the development team and the stakeholder. Typically the product owner will help determine what features/requirements are necessary, and therfore, are added to the product backlog.
 - **Scrum**
     - confusingly, this is the name of a daily meeting that happens when working during a sprint. This is also sometimes called a standup. During a standup (scrum) the development checks in with each other, describe their tasks for the day, and discuss any blockers among the team members
 - **Scrum master**
