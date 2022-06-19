@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Welcome to the login Home Page</h1>
+    <input type="button" value="Manager">
+    <input type="button" value="Tester"><br>
+    <br>
+    <input type="text" id= "userName" placeholder = "Please enter your username"> <br>
+    <br>
+    <br>
+    <input type="password" id= "password" placeholder = "Please enter your password"> <br>
+    <br>
+    <br>
+    <input type="button" value="Login"> <br> <br>
+
+    <button onclick="testOne()">click me to go to manager's Portal</button>
+    
+    <a href="login_manager-page.html">click me to go to manager's Portal</a>
+    
+    <label for="number">please enter a number for local storage</label>
+    <input type="number" id="number">
+    <label for="sessionNum">please enter a number for session storage</label>
+    <input type="number" id="sessionNum">
+
+    
+    
+</body>
+<script>
+    // const usernameInput = document.getElementById("username");
+    // const passwordInput = document.getElementById("password");
+
+
+    // const input = document.getElementById("number");
+    // const sessionInput = document.getElementById("sessionNum");
+
+
+    function testOne(){
+        // localStorage.setItem("number",input.value)
+        // sessionStorage.setItem("sessionNum",sessionInput.value);
+        window.location.href = "login_manager-page.html";
+    }
+
+   
+    // first I will make three objects that represent the responses of an http request: one for each user that needs their landing page
+    // const personOne = {
+    //     username: "personOne",
+    //     role: "Manager",
+    //     Fullname:""
+    // }
+    // const personTwo= {
+    //     username: "personTwo",
+    //     role: "Tester",
+    //     Fullname: ""
+    // }
+    
+        // const personThree = {
+        // username: "PersonThree",
+        // Role: "Validator",
+        // Fullname: "",
+        // }
+
+
+         /*
+        when determing where to send someone after a successfull login, you will want to choose one of the keys provided in the response body that
+        will return a consistent response no matter who is trying to login. In the case above, we will use the role of the individual to determine
+        which login page they will be redirected to, because this provides a consistent metric to work with. For this example all the individuals
+        will use the same password: password.
+    */
+
+//    function login(){
+//         // to make this example work I first need to simulate making the http request to actually perform the login
+//         // please note the actual code you will write for this will look different
+        
+//         // first thing to do is get the login info
+//         let username = usernameInput.value;
+//         let password = passwordInput.value;
+//         let responseBody;
+//         // the checks I am about to make would typically be handled by the API you interact with
+//         if(username === "personOne" && password === "password"){
+//             responseBody = personOne;
+//         } else if( username === "personTwo" && password === "password"){
+//             responseBody = personTwo;
+//         } else if( username === "personThree" && password === "password"){
+//             responseBody = personThree;
+//         } else {
+//             alert("login failed: please try again")
+//         }
+
+//         // we can assume we wrote our code to check the status code and we got a 200
+//         // we can now use the role of the response we got to determine what page to be sent to
+//         if(responseBody.role === "Manager"){
+//             window.location.href = "login-manager-page.html";
+//         } else if (responseBody.role === "Tester"){
+//             window.location.href = "login-tester.html";
+//         } else if (responseBody.role === "jester for the king"){
+//             window.location.href = "landing-three.html";
+//         } else {
+//             // this is my catch-all block in case something goes wrong that I didn't anticipate
+//             alert("something went wrong: please try again");
+//         }
+
+//    }
+
+
+
+
+    
+</script>
+</html>
+

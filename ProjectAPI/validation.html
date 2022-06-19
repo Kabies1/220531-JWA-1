@@ -24,8 +24,19 @@
 
         <button>Rejected</button>
         <button>Fixed</button>
-        <button>Shelve</button>
+        <button>Shelve</button> <br> <br>
+
+        <button onclick="transferToLoginPage()">Click me to go to tester's Page</button>
     </div>
+
+    <script>
+        function transferToLoginPage(){
+        // if the html file you want to go to is in a directory "above" the one that holds your current page
+        // then you need to use .. to indicate you are moving up a directory level
+        window.location.href = "login-tester.html";
+        
+    }
+    </script>
     
 </body>
 </html>
