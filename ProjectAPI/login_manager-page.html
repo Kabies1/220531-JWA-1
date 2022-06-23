@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manager's Portal</title>
 </head>
+
 <body>
     <h1>Welcome to the Manager's Portal</h1>
     <!-- <table>
@@ -20,41 +22,92 @@
        </tr>
     </table> -->
 
-        <h4>Select Defect Name</h4>
-        <select>
-            <option value="1">Not able to login</option>
-            <option value="2">User sees blank page</option>
-        </select>
+    <h4>Select Defect Name</h4>
+    <select>
+        <option value="1">Not able to login</option>
+        <option value="2">User sees blank page</option>
+    </select>
 
-        <h4>Select Tester</h4>
-        <select>
-            <option value="1">Tester 1</option>
-            <option value="2">Tester 2</option>
-        </select> <br /><br />
+    <h4>Select Tester</h4>
+    <select id="testers">
+        <!-- <option value="1">Tester 1</option>
+        <option value="2">Tester 2</option> -->
+    </select>
+    <br /><br />
 
-        <button type="button">Assign</button> <br> <br>
+    <button type="button">Assign</button> <br> <br>
 
 
-        <button onclick="transferToLoginPage()">Click me to go to page one</button>
-        <p id="result"></p>
-        <p id="sessionInfo"></p>  
-    
+    <button onclick="transferToLoginPage()">Click me to go to page one</button>
+    <p id="result"></p>
+    <p id="sessionInfo"></p>
+
 </body>
 <script>
 
-     // to transfer from one local html file to another you can use the window.location.href proper
-     function transferToLoginPage(){
+    // to transfer from one local html file to another you can use the window.location.href proper
+    function transferToLoginPage() {
         // if the html file you want to go to is in a directory "above" the one that holds your current page
         // then you need to use .. to indicate you are moving up a directory level
         window.location.href = "login-page.html";
-        
+
     }
 
     const result = document.getElementById("result");
     result.textContent = `The number you set on page one is ${localStorage.getItem("number")}`;
     const sessionInfo = document.getElementById("sessionInfo");
     sessionInfo.textContent = `the number you set in session storage on page one is ${sessionStorage.getItem("sessionNum")}`;
-    
+    const apiEndPoint = "https://bugcatcher.coe.revaturelabs.com";
+    // 1. Get the employees using https://bugcatcher.coe.revaturelabs.com/18/employees.
+    const employeesApiUrl = `${apiEndPoint}/18/employees`;
+
+    // Call the function to get all the employees data:
+    getAllEmployeesData();
+
+    // Declaring function to get employees data:
+    async function getAllEmployeesData() {
+        try {
+            const response = await fetch(employeesApiUrl);
+            // console.log({ response })
+            const data = await response.json();
+            console.log('Employees data from api', data);
+            // 2. Dsplay the data on the manager in the select element on the page.
+            // * a. We only need to get data for the testers, not all
+            const testersOnlyData = [];
+            for (let i = 0; i < data.length; i++) {
+                const element = data[i];
+                if (element.role === 'Tester') {
+                    testersOnlyData.push(element);
+                }
+            }
+
+            // *b. Create a list of testers only and display them
+            // Create an "li" node:
+            for (let i = 0; i < testersOnlyData.length; i++) {
+                const tester = testersOnlyData[i];
+                const testerName = `${tester.fname} ${tester.lname}`;
+                // const testerName1 = tester.fname + " " + tester.lname;
+                const testersNode = document.getElementById('testers');
+                const node = document.createElement('option');
+                node.setAttribute('value', testerName);
+                node.setAttribute('class', "testerClass");
+                // Create a text node:
+                const textNode = document.createTextNode(testerName);
+                node.appendChild(textNode);
+                testersNode.appendChild(node);
+                // console.log({ testersOnlyData });
+            }
+
+
+        } catch (error) {
+            console.log('There was an error logging you in', error);
+        }
+    }
+
+
+
+
 
 </script>
+
 </html>

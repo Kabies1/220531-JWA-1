@@ -41,7 +41,7 @@
     const usernameInput = document.getElementById("userName");
     const passwordInput = document.getElementById("password");
 
-    var selectedRole = '';
+    var selectedRole;
 
     function selectManager() {
         selectedRole = "Manager";
@@ -86,13 +86,14 @@
             console.log('all Defects', defects);
             //return false;
             // End testing defects
+            
 
             if (data.role === "Manager") {
                 window.location.href = "login_manager-page.html";
             } else if (data.role === "Tester") {
                 window.location.href = "login-tester.html";
             }else{
-                alert("You are not allowed to login")
+                alert(data.detail);
             }
             // Check who is logging in (role)
         } catch (error) {
