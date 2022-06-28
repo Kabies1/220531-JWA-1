@@ -6,30 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <!-- <style>
+        input {
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+        }
+    </style> -->
 </head>
 
 <body>
     <h1>Welcome to the login Home Page</h1>
-    <input onclick="selectManager()" type="button" value="Manager">
-    <input onclick="selectTester()" type="button" value="Tester"><br>
-    <br>
-    <input type="text" id="userName" placeholder="Please enter your username"> <br>
-    <br>
-    <br>
-    <input type="password" id="password" placeholder="Please enter your password"> <br>
-    <br>
-    <br>
+    <!-- <input onclick="selectManager()" type="button" value="Manager">
+    <input onclick="selectTester()" type="button" value="Tester"><br> -->
 
-    <br> <br>
+    <div>
+        <br>
+        <input type="text" id="userName" placeholder="Please enter your username"> <br>
+        <br>
+        <br>
+        <input type="password" id="password" placeholder="Please enter your password"> <br>
+        <br>
+        <br>
+
+        <br> <br>
+    </div>
+
+    <!-- <div>
+        <h3>Tester</h3>
+        <br>
+        <input type="text" id="userName" placeholder="Please enter your username" value="Mkamara"> <br>
+        <br>
+        <br>
+        <input type="password" id="password" placeholder="Please enter your password" value="Ethan"> <br>
+        <br>
+        <br>
+
+        <br> <br>
+
+        <h3>Manager</h3>
+        <br>
+        <input type="text" id="userName" placeholder="Please enter your username" value="Lmurungi"> <br>
+        <br>
+        <br>
+        <input type="password" id="password" placeholder="Please enter your password" value="Mark"> <br>
+        <br>
+        <br>
+
+        <br> <br>
+    </div> -->
+
 
     <button onclick="loginUser()">Login User</button><br>
 
     <!-- <a href="login_manager-page.html">click me to go to manager's Portal</a> -->
 
-    <label for="number">please enter a number for local storage</label>
+    <!-- <label for="number">please enter a number for local storage</label>
     <input type="number" id="number">
     <label for="sessionNum">please enter a number for session storage</label>
-    <input type="number" id="sessionNum">
+    <input type="number" id="sessionNum"> -->
 
 
 
@@ -71,10 +106,10 @@
         // const loginApiUrl = apiEndPoint + "/18/login";
         // const loginApiUrl =  "https://bugcatcher.coe.revaturelabs.com/18/login";
         const loginApiUrl = `${apiEndPoint}/18/login`;
-        
+
         try {
             const response = await fetch(loginApiUrl, config);
-            console.log({response})
+            console.log({ response })
             const data = await response.json();
             console.log('data from api', data);
 
@@ -86,13 +121,16 @@
             console.log('all Defects', defects);
             //return false;
             // End testing defects
-            
+
 
             if (data.role === "Manager") {
+                localStorage.setItem('username', data.username);
                 window.location.href = "login_manager-page.html";
             } else if (data.role === "Tester") {
+                // Get username of the tester and save it to local storage
+                localStorage.setItem('username', data.username);
                 window.location.href = "login-tester.html";
-            }else{
+            } else {
                 alert(data.detail);
             }
             // Check who is logging in (role)
@@ -195,7 +233,7 @@
 
     //console.log("2---------dbqdbqdbqw")
 
-    
+
 
 </script>
 
