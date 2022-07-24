@@ -10,9 +10,16 @@
         .description {
             display: block;
             border: 1px solid grey;
-            min-width: 300px;
+            width: 200px;
             padding: 5px;
             margin: 5px 0;
+        }
+        .wrapper {
+            background-color: #ccc;
+            border: 1px solid grey;
+            margin: 10px;
+            padding:10px;
+            width: 250px;
         }
     </style>
 </head>
@@ -74,23 +81,25 @@
             for (let i = 0; i < arrayOfDefects.length; i++) {
                 const defect = arrayOfDefects[i];
                 const x = `
-                    <div>
+                    <div class="wrapper" id="${defect.defectId}">
                         <span><b>Defect Name:</b></span><br>
                         <span class="description">${defect.desc}</span>
                         
                         <br>
                         <span><b>Defect ID:</b></span> <br>
-                        <span class="description">${defect.defectId}</span>
+                        <span class="defects">${defect.defectId}</span>
 
                         <br>
                         <span><b>Defect Status:</b></span> <br>
-                        <span class="description">${defect.status}</span>
+                        <span class="status">${defect.status}</span>
 
                         <button onclick="acceptOrDeclineDefect(${defect.defectId}, 'Accepted')">Accept</button>
                         <button onclick="acceptOrDeclineDefect(${defect.defectId}, 'Declined')">Decline</button>
                     </div>
                 `;
-                node.innerHTML = x;
+                // node.innerHTML = x;
+                node.insertAdjacentHTML( 'beforeend', x );
+
             }
 
         }

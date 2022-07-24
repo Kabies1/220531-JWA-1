@@ -1,44 +1,44 @@
-Manager Acceptance Criteria
+Feature:    Users of my api-automation should be able to login to access their homepages
 
-FEATURE:    Managers should be able to login to access their homepages
+    Scenario:   As a manager I want to sign in so I can view my custom homepage
 
-    SCENARIO:   As a manager I want to sign in so I can view my custom homepage
-
-        GIVEN   the manager is on the login page
-        WHEN    the manager enters his correct username
-        WHEN    the manager enters his correct password
-        WHEN    the manager clicks the login button
-        THEN    the manager should be logged in to the manager home page
+        Given   the employee is on the login page
+        When    the manager enters his correct username
+        When    the manager enters his correct password
+        When    the employee clicks the login button
+        Then    the manager should be logged in to the manager home page
 
 
 _________________________________________________________________________
 
 Tester Acceptance Criteria
 
-FEATURE:    Testers should be able to login to access their homepages
+Feature: Testers should be able to login to access their homepages
 
-SCENARIO:   As a tester I want to sign in so I can view my custom homepage
+Scenario:   As a tester I want to sign in so I can view my custom homepage
 
-GIVEN   the tester is on the login page
-WHEN    the tester enters his correct username
-WHEN    the tester enters his correct password
-WHEN    the tester clicks the login button
-THEN    the tester should be logged in to the tester home page
+Given   the employee is on the login page
+When    the tester enters his correct username
+When    the tester enters his correct password
+When    the employee clicks the login button
+Then    the tester should be logged in to the tester home page
 
-FEATURE:    Testers should be able to update defects so they can monitor their progress
+Feature:    Testers should be able to update defects so they can monitor their progress
 
 Scenario: Testers should be able to update from pending to accepted
 
-GIVEN   the tester is on the tester's page
-WHEN    the tester receives the status information of the deffects
-WHEN    the tester revievs the data for correctness 
-WHEN    the deffect data is meets the condtions
-THEN    the tester should update the deffects from pending to acceptated
+Given   the tester is on the tester's page
+When    the tester receives the status information of the deffects
+When    the tester revievs the data for correctness 
+When    the deffect data meets the condtions
+Then    the tester should update the deffects from pending to acceptated
 
 Scenario: Testers should be able to update from pending to rejected
 
-GIVEN   the tester is on the tester's page
-WHEN    the tester receives the status information of the deffects
-WHEN    the tester revievs the data for correctness 
-WHEN    the deffect data does meet the condtions
-THEN    the tester should update the deffects from pending to declined
+Given   the tester is on the tester's page
+When    the tester receives the status information of the deffects
+When    the tester revievs the data for correctness 
+When    the deffect data does meet the condtions
+Then    the tester should update the deffects from pending to declined
+
+

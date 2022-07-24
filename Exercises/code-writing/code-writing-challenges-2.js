@@ -53,3 +53,15 @@ if(3 == 2){
 } else {
     console.log("if you can see this you are done with exercise four")
 }
+
+
+const M = parseInt(readline());
+const N = parseInt(readline());
+var inputs = readline().split(' ');
+sum = 0
+for (let i = 0; i < N; i++) {
+    const E = parseInt(inputs[i]);
+    sum = sum + (E%M)
+}
+
+console.log(sum)
